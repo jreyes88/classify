@@ -1,5 +1,5 @@
 var express = require('express');
-
+var path = require('path');
 // var classify = require('../models/classify.js');
 
 var router = express.Router();
@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/home', function(req, res) {
-    res.send('Hello World');
+    res.sendFile(path.join(__dirname, '../joey_test_stuff/login.html'));
 })
 
 // teacher routes
