@@ -1,6 +1,6 @@
 var express = require('express');
 
-var classify = require('../models/classify.js');
+// var classify = require('../models/classify.js');
 
 var router = express.Router();
 
@@ -8,6 +8,10 @@ var router = express.Router();
 router.get('/', function(req, res) {
     res.redirect('/home');
 });
+
+router.get('/home', function(req, res) {
+    res.send('Hello World');
+})
 
 // teacher routes
 router.get('/home/teacher/:userName', function(req, res) {
