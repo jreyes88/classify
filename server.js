@@ -10,8 +10,12 @@ app.use('/', routes);
 // -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
 // not working
 // -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
-var fileUpload = require('express-fileupload');
-app.use(fileUpload());
+// var fileUpload = require('express-fileupload');
+// app.use(fileUpload());
+
+var multipart = require('connect-multiparty');
+
+app.use('/home/teacher/fileUpload', multipart());
 
 // dependencies for post requests
 var bodyParser = require('body-parser');
