@@ -1,9 +1,21 @@
 // express package
 var express = require('express');
 var routes = require('./controllers/classify-controller.js');
+
 // set up express app
 var app = express();
 app.use('/', routes);
+
+// require and use express-fileupload
+// -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+// not working
+// -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
+// var fileUpload = require('express-fileupload');
+// app.use(fileUpload());
+
+var multipart = require('connect-multiparty');
+
+app.use('/home/teacher/fileUpload', multipart());
 
 // dependencies for post requests
 var bodyParser = require('body-parser');
