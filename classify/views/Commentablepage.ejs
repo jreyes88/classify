@@ -1,0 +1,48 @@
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<%=page.language%>"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="<%=page.language%>"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="<%=page.language%>"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="<%=page.language%>">
+<!--<![endif]-->
+
+<% include header.ejs %>
+
+<body id="page<%= page.itemId %>">
+	<div id="wrapper">
+
+  <div class="main">
+    <section>
+      <h1><%= page.title %></h1>
+
+      <% for (var ic in page.content) { %>
+        <% if (page.content[ic].isIntro()) { %>
+          <%- page.content[ic].render() %>
+        <% } %>
+      <% } %>
+    </section>
+  </div>
+
+  <div id="comments">
+    <form method="POST" id="commentForm" action="<%=path.prefix%>/<%=page.language%>/<%=page.itemId%>">
+    <input type="hidden" name="request" value="submit">
+      <div>
+        <label>Your Name</label>
+        <input type="text" default="anonymous" name="uName">
+      </div>
+      <div>
+        <label>Your message</label>
+        <textarea name="comment" id="txtComment" cols="100" rows="5"></textarea>
+      </div>
+      <div>
+        <button id="doSubmit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <% include footer.ejs %>
+  </div>
+
+</body>
+</html>
