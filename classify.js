@@ -13,7 +13,6 @@ var express = cody.express;
 var fs = cody.fs;
 var path = require("path");
 
-
 cody.server = express();
 var bodyParser = cody.bodyParser;
 var expressSession = cody.expressSession;
@@ -24,7 +23,7 @@ var sitename = __filename.split(path.sep).pop().split(".")[0];
 // add i18n
 var i18n = cody.i18n;
 i18n.configure({
-    locales:['zh-cn', 'en'],
+    locales:['en'],
     directory: __dirname + '/locales',
     defaultLocale: 'en'
 });
