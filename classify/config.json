@@ -1,1 +1,0 @@
-{"name":"classify","mailFrom":"info@classify","hostnames":"localhost,classify","db":"classify","dbuser":"root","dbpassword":"","dbhost":"localhost","smtp":"smtpmailer.classify","version":"V0.1","defaultlanguage":"en","datapath":"/usr/local/data/classify","port":3001}
