@@ -1,0 +1,20 @@
+{
+  "name": "classify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "classify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chanceeakin/classify.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chanceeakin/classify/issues"
+  },
+  "homepage": "https://github.com/chanceeakin/classify#readme"
+}
