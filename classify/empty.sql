@@ -417,3 +417,13 @@ INSERT INTO `users` VALUES
 (3,'test','rWorks Test',password("empty"),'rWorks',2,0,99,'Y','info@mysite.com','','N',0),
 (11,'user','Mr. Owner User',password("empty"),'users', 50,0,99,'Y','info@mysite.com','','N',10);
 UNLOCK TABLES;
+
+
+
+CREATE  TABLE `comment` (
+  `idcomment` INT NOT NULL AUTO_INCREMENT ,
+  `user` VARCHAR(45) NOT NULL DEFAULT 'anonymous' ,
+  `comment` TEXT NOT NULL ,
+  `pageid` INT NOT NULL ,
+  `time` DATETIME NOT NULL ,
+  PRIMARY KEY (`idcomment`) );
