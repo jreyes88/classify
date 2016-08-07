@@ -24,7 +24,7 @@
     </section>
   </div>
 
-  <div id="comments">
+  <div>
     <form method="POST" id="commentForm" action="/<%=page.language%>/<%=page.itemId%>">
     <input type="hidden" name="request" value="submit">
       <div>
@@ -41,8 +41,36 @@
     </form>
   </div>
 
+  <div id="comments">
+    <% if (comments.length === 0) { %>
+    <h4>No comments; be the first to comment!</h4>
+    <% } else { for (var i = 0; i < comments.length; i++) { var comment = comments[i] %>
+    <div class="commentHolder">
+      <div>
+      <%= comment.user %> <%= comment.time %>
+      </div>
+      <div class="commentText">
+      <p><%= comment.comment %></p>
+      </div>
+      <% } } %>
+  </div>
+
   <% include footer.ejs %>
   </div>
 
 </body>
 </html>
+
+
+<!--  <% for (var c in page.content) { %>
+      <% if(page.comments.length === 0) { %>
+    <h4>No comments; be the first to comment! </h4>
+    <%} else { var comment = page.comments[c] %>
+      <div class="commentHolder">
+        <div>
+        <%= comment.user %> <%= comment.time %>
+        </div>
+        <div class="commentText">
+        <p><%= comment.comment %></p>
+        </div>
+    <% } } %> -->
