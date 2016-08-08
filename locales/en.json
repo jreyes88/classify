@@ -54,5 +54,17 @@
 	"add a group": "add a group",
 	"Save": "Save",
 	"Last Modified": "Last Modified",
-	"Move": "Move"
+	"Move": "Move",
+	"login-successful": "login-successful",
+	"Add Folder": "Add Folder",
+	"Add Image": "Add Image",
+	"Images": "Images",
+	"Layout": "Layout",
+	"Name": "Name",
+	"Info": "Info",
+	"Created": "Created",
+	"Extension": "Extension",
+	"Note": "Note",
+	"Image": "Image",
+	"Preview": "Preview"
 }
