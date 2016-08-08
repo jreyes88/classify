@@ -1,0 +1,139 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+@font-face{
+font-family: englishessay;
+src:url('../fonts/english_essay.ttf');
+}
+
+@font-face{
+	font-family: barbarian;
+	src:url('../fonts/Barbarian.ttf');
+}
+
+@font-face{
+  font-family: kindergarten;
+  src:url('../fonts/KGMissKindergarten.ttf');
+}
+
+/*a {
+ font-family: kindergarten;
+}
+*/
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.classify{
+	font-family: kindergarten;
+}
+
+.doomsquad{
+	font-family: barbarian;
+	font-size: 40px;
+	color:black;
+}
+
+.squad{
+	font-size: 190px;
+	font-family: barbarian;
+}
+
+.side-nav{
+	display: inline;
+}
+
+li{
+	margin-bottom: 20px;
+}
+
+.outline{
+
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   /*-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: teal;*/
+}
+
+#text-modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#calendar-modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#header-modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#media-modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#photo-modal {
+  max-height: calc(100% - 100px);
+  position: fixed;
+    top: 50%;
+    left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+
+.modalHead{
+	text-align: center;
+}
+
+.input-field{
+	transform: translate(50%, 50%);
+}
+
+
+/*header*/
+.squadBody {
+  margin-left: 31vw;
+  width: 60vw;
+}
+
+#wireframe {
+  min-height: 60vh;
+  width: 100%;
+  border: 3px solid black;
+}
+
+.wireframeHeader {
+  text-align: center;
+}
+.wireframePhoto {
+  width: 100%;
+}
+iframe {
+  width: 50vw;
+  height: 25vw;
+  margin: 0 auto;
+}

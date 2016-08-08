@@ -8,6 +8,7 @@
 	"Account": "Account",
 	"Sign out": "Sign out",
 	"Dashboard": "Dashboard",
+	"login-successful": "login-successful",
 	"OK": "OK",
 	"Cancel": "Cancel",
 	"Add": "Add",
@@ -31,6 +32,11 @@
 	"Content of first subitem": "Content of first subitem",
 	"Add a web page": "Add a web page",
 	"page": "page",
+	"New": "New",
+	"Name": "Name",
+	"Controller": "Controller",
+	"Render": "Render",
+	"System": "System",
 	"Page Title": "Page Title",
 	"View Page": "View Page",
 	"Content": "Content",
@@ -53,5 +59,6 @@
 	"Allowed Domains": "Allowed Domains",
 	"add a group": "add a group",
 	"Save": "Save",
-	"Last Modified": "Last Modified"
+	"Last Modified": "Last Modified",
+	"Something went wrong during delete.": "Something went wrong during delete."
 }

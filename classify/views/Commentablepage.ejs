@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<%=page.language%>"> <![endif]-->
@@ -10,7 +11,8 @@
 <% include header.ejs %>
 
 <body id="page<%= page.itemId %>">
-	<div id="wrapper">
+  <% include top.ejs %>
+  <div id="wrapper">
 
   <div class="main">
     <section>
@@ -24,7 +26,7 @@
     </section>
   </div>
 
-  <div id="comments">
+  <div>
     <form method="POST" id="commentForm" action="/<%=page.language%>/<%=page.itemId%>">
     <input type="hidden" name="request" value="submit">
       <div>
@@ -39,6 +41,20 @@
         <button id="doSubmit">Submit</button>
       </div>
     </form>
+  </div>
+
+  <div id="comments">
+     <% if (comments.length === 0) { %>
+    <h4>No comments; be the first to comment!</h4>
+    <% } else { for (var i = 0; i < comments.length; i++) { var comment = comments[i] %>
+    <div class="commentHolder">
+      <div>
+      <%= comment.user %> <%= comment.time %>
+      </div>
+      <div class="commentText">
+      <p><%= comment.comment %></p>
+      </div>
+      <% } } %>
   </div>
 
   <% include footer.ejs %>
