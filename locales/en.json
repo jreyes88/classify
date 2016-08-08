@@ -66,5 +66,20 @@
 	"Extension": "Extension",
 	"Note": "Note",
 	"Image": "Image",
-	"Preview": "Preview"
+	"Preview": "Preview",
+	"Add File": "Add File",
+	"Add Form": "Add Form",
+	"Add Item": "Add Item",
+	"Leave empty if you don't want to change your password.": "Leave empty if you don't want to change your password.",
+	"Group": "Group",
+	"Choose an existing group or type a new one": "Choose an existing group or type a new one",
+	"Level": "Level",
+	"Bad logins": "Bad logins",
+	"Max allowed": "Max allowed",
+	"Allows Mail": "Allows Mail",
+	"Email": "Email",
+	"Item successfully deleted": "Item successfully deleted",
+	"New": "New",
+	"Naam": "Naam",
+	"Domain": "Domain"
 }

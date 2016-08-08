@@ -5,7 +5,7 @@ var cody = require("cody");
 
 function CommentController(context) {
     var self = this;
-    console.log("CommentController.constructor -> page(" + context.page.itemId + ") = " + context.page.title + ", request = " + context.request);
+    // console.log("CommentController.constructor -> page(" + context.page.itemId + ") = " + context.page.title + ", request = " + context.request);
     self.CommentView = "Commentablepage.ejs";
 
     self.sqlGetCommentByPage = "SELECT * FROM comment WHERE pageid = ?";
@@ -16,12 +16,11 @@ function CommentController(context) {
 CommentController.prototype = Object.create( cody.Controller.prototype);
 module.exports = CommentController;
 
-
 CommentController.prototype.doRequest = function(finish) {
     var self = this;
     var pageId = self.context.page.itemId;
     // check comment in terminal
-    console.log("request : " + self.isRequest(""));
+    // console.log("request : " + self.isRequest(""));
     // /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
     if (self.isRequest("")) {
         self.doList([pageId], function(comments) {finish(self.CommentView, {comments: comments})});
@@ -29,7 +28,7 @@ CommentController.prototype.doRequest = function(finish) {
         // comment is submitted
         var user = self.getParam("uName");
         var comment = self.getParam("comment");
-        console.log(user + " said: " + comment);
+        // console.log(user + " said: " + comment);
         var date = self.getCurrentDateTime();
         var param = [user,comment,pageId,date];
         self.AddNewComment(param, function() {
@@ -72,7 +71,7 @@ CommentController.prototype.doList = function(param, finish) {
         } else {
             self.context.comments = res;
             for(var i = 0; i < self.context.comments.length; i ++){
-                console.log(self.context.comments[i]);
+                // console.log(self.context.comments[i]);
             }
         }
         finish(self.context.comments);
