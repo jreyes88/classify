@@ -49,7 +49,11 @@ cody.server.get("/cody/static/*", function (req, res) {
 
 // 1a. load default config
 cody.config = require(path.join(__dirname, sitename, "config.json"));
-cody.config.controllers = cody.config.controllers || [];
+cody.config.controllers = cody.config.controllers || 
+  [
+    // {name: 'EventController', controller: classify.EventController},
+    {name: 'CommentController', controller: classify.CommentController}
+  ];
 
 // 1b. require controllers
 var cpath = path.join(__dirname, sitename, "controllers");
