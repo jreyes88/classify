@@ -2,10 +2,11 @@
 // Johan Coppieters - jan 2013 - jWorks
 //
 //
-var mysql = require('mysql');
-var cody = require('../index.js');
 
 console.log("loading " + module.id);
+
+var mysql = require("mysql");
+var cody = require("cody");
 
 
 function ImageController(context) {
@@ -14,6 +15,10 @@ function ImageController(context) {
 
     // init inherited controller
     cody.TreeController.call(this, context);
+
+    var self = this;
+    self.ImageView = "Imagepage.ejs";
+
 }
 
 ImageController.prototype = Object.create( cody.TreeController.prototype );
@@ -38,8 +43,7 @@ ImageController.prototype.getRoot = function() {
     return cody.Application.kImageRoot;
 };
 
-ImageController.prototype.getType = function(theNode) {
-    console.log("The Node Extension: " + theNode.extention);
+ImageController.prototype.getType = function(theNode) { 
     return ((theNode.extention === "xxx") || (theNode.extention === "")) ? "folder" : "image"; 
 };
 
@@ -50,6 +54,7 @@ ImageController.prototype.getObject = function(id) {
 ImageController.prototype.getFolder = function() { 
     return "/images"; 
 };
+
 
 /* Overridden - Action functions */
 
