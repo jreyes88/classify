@@ -24,7 +24,6 @@ CommentController.prototype.doRequest = function(finish) {
     console.log("request : " + self.isRequest(""));
     // /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/
     if (self.isRequest("")) {
-        console.log('eat a dick, node.');
         self.doList([pageId], function(comments) {finish(self.CommentView, {comments: comments})});
     } else if (self.isRequest("submit")) {
         // comment is submitted
@@ -36,7 +35,7 @@ CommentController.prototype.doRequest = function(finish) {
         self.AddNewComment(param, function() {
             self.doList([pageId], function(comments) {finish(self.CommentView, {comments: comments})})});
     } else {
-        finish(self.CommentView);
+        self.doList([pageId], function(comments) {finish(self.CommentView, {comments: comments})});
     }
 };
 
